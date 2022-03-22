@@ -27,3 +27,23 @@ añadir en agular.json la siguiente ruta.
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
+
+
+
+crear archivo server.js 
+
+
+
+const express = require('express');
+ const path = require('path'); 
+ const app = express(); 
+ app.use(express.static(__dirname + '/dist/<my-angular-app>'));
+  app.get('/*', function(req,res) {res.sendFile(path.join(__dirname+'/dist/<my-angular-app>/index.html'));});
+   app.listen(process.env.PORT || 8080);
+
+
+
+
+
+
+  
