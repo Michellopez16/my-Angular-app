@@ -1,0 +1,17 @@
+
+
+<p>componente1 works!</p>
+
+
+<h1 style="background: blue"  >Tu velocidad es {{velocidad}} </h1>
+
+<h1 [style.background] =" velocidad <= 80 ? 'green' : 'red' "  >Tu velocidad es {{velocidad}} </h1>
+
+
+<div *ngIf="velocidad <= 80">
+    <h1>Velocidad correcta</h1>
+</div>
+
+<div *ngIf="velocidad > 80">
+    <h1>Velocidad Alta</h1>
+</div>
